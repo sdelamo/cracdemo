@@ -1,6 +1,7 @@
 package cracdemo;
 
 import io.micronaut.context.ApplicationContext;
+import io.micronaut.context.env.Environment;
 import io.micronaut.core.type.Argument;
 import io.micronaut.crac.test.CheckpointSimulator;
 import io.micronaut.http.HttpRequest;
@@ -21,7 +22,7 @@ class HelloWorldControllerTest {
 
     @Test
     void emulateCheckpoint() {
-        try (EmbeddedServer server = ApplicationContext.run(EmbeddedServer.class)) {
+        try (EmbeddedServer server = ApplicationContext.run(EmbeddedServer.class, Environment.TEST)) {
             CheckpointSimulator checkpointSimulator =
                     server.getApplicationContext().getBean(CheckpointSimulator.class);
             testApp(server);
