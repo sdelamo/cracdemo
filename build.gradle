@@ -38,12 +38,5 @@ micronaut {
     }
 }
 
-tasks.named("dockerBuild") {
-    images = ["gcr.io/crac-test/mndocker:latest"]
-}
-tasks.named("dockerBuildCrac") {
-    images = ["gcr.io/crac-test/mncrac:latest"]
-}
-
 
 
