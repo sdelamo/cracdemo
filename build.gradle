@@ -18,6 +18,7 @@ dependencies {
     implementation("io.micronaut.crac:micronaut-crac")
     implementation("jakarta.annotation:jakarta.annotation-api")
     runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly "org.yaml:snakeyaml"
 }
 
 application {
