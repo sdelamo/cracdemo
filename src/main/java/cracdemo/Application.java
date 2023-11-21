@@ -12,7 +12,7 @@ public class Application {
     public static class Configurer implements ApplicationContextConfigurer {
         @Override
         public void configure(@NonNull ApplicationContextBuilder builder) {
-            builder.eagerInitSingletons(true).deduceEnvironment(false);
+            builder.eagerInitSingletons(true);
         }
     }
     public static void main(String[] args) {
