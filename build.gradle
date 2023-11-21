@@ -13,11 +13,11 @@ repositories {
 
 dependencies {
     annotationProcessor("io.micronaut:micronaut-http-validation")
-    implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut.crac:micronaut-crac")
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-management")
+    testImplementation("io.micronaut:micronaut-http-client-jdk")
 }
 
 application {
