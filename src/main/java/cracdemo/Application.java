@@ -1,5 +1,6 @@
 package cracdemo;
 
+import io.micronaut.context.env.Environment;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.context.ApplicationContextBuilder;
 import io.micronaut.context.ApplicationContextConfigurer;
@@ -12,7 +13,7 @@ public class Application {
     public static class Configurer implements ApplicationContextConfigurer {
         @Override
         public void configure(@NonNull ApplicationContextBuilder builder) {
-            builder.eagerInitSingletons(true);
+            builder.eagerInitSingletons(true).defaultEnvironments(Environment.DEVELOPMENT);
         }
     }
     public static void main(String[] args) {

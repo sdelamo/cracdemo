@@ -2,6 +2,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id("io.micronaut.crac") version "4.2.0"
     id("io.micronaut.application") version "4.2.0"
+    id("io.micronaut.test-resources") version "4.2.0"
 }
 
 version = "0.1"
@@ -19,6 +20,11 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-management")
     testImplementation("io.micronaut:micronaut-http-client-jdk")
+
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
+    implementation("io.micronaut.data:micronaut-data-jdbc")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    runtimeOnly("org.postgresql:postgresql")
 }
 
 application {
